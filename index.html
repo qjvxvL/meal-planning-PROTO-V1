@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Weekly Meal Planner</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <h1>Simple Weekly Meal Planner</h1>
+      <p>
+        Review your weekly meal plan, switch between two curated options for each
+        day, and refresh the entire plan once if you want a new set of meals.
+      </p>
+    </header>
+
+    <main>
+      <section class="controls">
+        <button id="refresh-button" type="button">Refresh Weekly Plan</button>
+        <p id="refresh-hint">You can refresh the plan once to see new meals.</p>
+      </section>
+
+      <section id="week-plan" class="week-plan" aria-live="polite"></section>
+    </main>
+
+    <template id="day-card-template">
+      <article class="day-card">
+        <header>
+          <h2 class="day-name"></h2>
+          <button class="swap-button" type="button">Change Meal</button>
+        </header>
+        <div class="meal-details">
+          <h3 class="meal-title"></h3>
+          <p class="meal-description"></p>
+          <h4>Ingredients</h4>
+          <ul class="ingredients-list"></ul>
+        </div>
+      </article>
+    </template>
+
+    <script src="script.js"></script>
+  </body>
+</html>
